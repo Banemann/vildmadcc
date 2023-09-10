@@ -15,6 +15,20 @@ function showSvamp(svamp) {
   copy.querySelector("h2").textContent = svamp.id;
   copy.querySelector(".title_").textContent = svamp.title;
   copy.querySelector(".kategori_").textContent = svamp.categories_name;
+  copy.querySelector(
+    ".description"
+  ).textContent = `Kan findes i ${svamp.sankelandskaber_title}`;
+
+  copy.querySelector(".spiselig").textContent = `Spiselig: ${svamp.isEatable}`;
+
+  if (svamp.isEatable === true) {
+    copy.querySelector(".spiselig").textContent = `Svampen er spiselig`;
+  } else {
+    copy.querySelector(
+      ".spiselig"
+    ).textContent = `Svampen er ikke spiselig, hold øje!`;
+  }
+
   //copy.querySelector(".season_0").textContent = svamp.season_0;
   copy.querySelector("img").src = svamp.profile_image_src;
   const parent = document.querySelector(".grid");
