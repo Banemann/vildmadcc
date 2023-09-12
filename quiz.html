@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Vildmad</title>
-    <link rel="stylesheet" href="css/quiz.css">
-</head>
-<body>
-    <div class="quiz-container">
-        <h1>Svampe Quizzen</h1>
-        <div class="question" id="question">
-            Question goes here.
+    <link rel="stylesheet" href="css/quiz.css" />
+  </head>
+  <body>
+    <header>
+        
+    </header>
+
+    <main>
+        <h1 class="quizh1">Svampe Quizzen</h1>
+        <div id="score">0 ud af 0</div>
+
+      <div id="quiz-container">        
+        <div>
+          <h2 id="question">Hvilken svamp er følgende?</h2>
+          <img id="quiz-image" src="" alt="questionimg" />
+          
         </div>
-        <div class="choices">
-            <button class="choice" onclick="checkAnswer(0)">Choice 1</button>
-            <button class="choice" onclick="checkAnswer(1)">Choice 2</button>
-            <button class="choice" onclick="checkAnswer(2)">Choice 3</button>
-            <button class="choice" onclick="checkAnswer(3)">Choice 4</button>
+        <div id="options">
         </div>
         <div id="result"></div>
-    </div>
+        
+      </div>
+    </main>
+
+    <footer>
+        
+        <a class="back" href="index.html">Tilbage til forsiden</a>
+    </footer>
 
     <script src="js/quiz.js"></script>
-</body>
+  </body>
 </html>
