@@ -1,3 +1,58 @@
-img{ 
-width: 50%;
+img {
+  width: 50%;
+}
+
+/* Reset some default styles */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the grid container */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Style the individual templates */
+.svamp {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.svamp h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.title_ {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.kategori_ {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.powers,
+.weaknesses {
+  margin-top: 10px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svamp {
+    width: 100%;
+  }
 }
