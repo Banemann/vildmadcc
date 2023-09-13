@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Filtrering  -->
+    <h1>Mushroom Filter</h1>
+    <form id="filterForm">
+      <label for="mushroomType">Select Mushroom Type:</label>
+      <select id="mushroomType" name="mushroomType">
+        <option value="all">All Mushrooms</option>
+        <option value="eatable">Eatable</option>
+        <option value="noneatable">Non-Eatable</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+    <div id="filteredResults">
+      <!-- Filtered mushroom data will be displayed here -->
+    </div>
+
+    <!-- data herunder -->
     <div class="grid"></div>
     <template>
       <article class="svamp">
@@ -24,5 +40,6 @@
     </template>
 
     <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
   </body>
 </html>
