@@ -1,8 +1,13 @@
+main{
+  margin: 0 20%;
+}
+
 header img{
   width: 10%;
   display: flex;
   padding-top: 1%;
-  padding-left: 1%;
+  padding-left: 45%;
+  margin-bottom: 2%;
 }
 
 header {
@@ -16,25 +21,35 @@ header {
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 1%;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  
   font-size: 24px;
+  
+  border-radius: 50px;
+  padding: 1%;
+  background-color: #00a84e;
+  color: #fff;
 }
 
 nav ul li a:hover {
-  color: #ffcc00;
+ background-color: #fff;
+ color: #16D5DB;
 }
 
 img {
   width: 50%;
+}
+
+.opskrift{
+  display: none;
 }
 
 /* Reset some default styles */
@@ -43,6 +58,13 @@ h1,
 p {
   margin: 0;
   padding: 0;
+  font-family: Comfortaa;
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url(../font/Comfortaa_Bold.ttf);
+  font-weight: bold;
 }
 
 /* Style the grid container */
@@ -61,6 +83,15 @@ p {
   border-radius: 10px;
 }
 
+.kategori_{
+  display: none;
+}
+
+.svamp img{
+  margin-top: 8%;
+  border-radius: 4%;
+}
+
 .svamp h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -71,9 +102,13 @@ p {
   color: #333;
 }
 
-.kategori_ {
-  font-size: 1.2rem;
-  color: #555;
+.description{
+  padding-top: 7%;
+}
+
+.spiselig{
+  padding: 8%;
+  font-size: 18px;
 }
 
 #filterForm {
@@ -101,7 +136,6 @@ h1 {
   margin-top: 20px;
   color: #333;
 }
-
 
 
 /* Responsive layout for mobile */
