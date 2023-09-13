@@ -57,6 +57,8 @@ function showSvamp(svamp) {
   copy.querySelector("h2").textContent = svamp.id;
   copy.querySelector(".title_").textContent = svamp.title;
   copy.querySelector(".kategori_").textContent = svamp.categories_name;
+  copy.querySelector(".opskrift").textContent = svamp.Opskrift;
+
   copy.querySelector(
     ".description"
   ).textContent = `Kan findes i ${svamp.sankelandskaber_title}`;
@@ -73,3 +75,22 @@ function showSvamp(svamp) {
   const parent = document.querySelector(".grid");
   parent.appendChild(copy);
 }
+
+// Function to handle clicking on a svamp element
+function handleClick(event) {
+  const svamp = event.target.closest(".svamp");
+  if (svamp) {
+    const title = svamp.querySelector(".title_").textContent;
+    const description = svamp.querySelector(".description").textContent;
+    const opskrift = svamp.querySelector(".opskrift").textContent;
+
+    // Display an alert with the mushroom's title and description
+    alert(
+      `Mushroom Title: ${title}\nDescription: ${description}\nOpskrift: ${opskrift}`
+    );
+  }
+}
+
+// Add a click event listener to a common ancestor of .svamp elements
+const grid = document.querySelector(".grid");
+grid.addEventListener("click", handleClick);
