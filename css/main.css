@@ -121,13 +121,17 @@ p {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #00a84e;
   color: #fff;
   border: none;
   padding: 8px 20px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+}
+
+button:hover{
+  background-color: #16D5DB;
 }
 
 h1 {
