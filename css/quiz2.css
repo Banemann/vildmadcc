@@ -1,9 +1,15 @@
 body {
     margin: 5% 5%;
-    font-family: Arial, sans-serif;
+    font-family: Comfortaa;
     text-align: center;
     background-color: #00a84e;
 }
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../font/comfortaa_bold-webfont.woff);
+    font-weight: bold;
+  }
 
 img, .img, #img{
     width: 100%;
