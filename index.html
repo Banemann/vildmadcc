@@ -7,55 +7,53 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-     <header>
-      <a href="index.html">
-      <img src="imgs/vild-mad-logo.png" alt="logo"></a>
+    <header>
+      <a href="index.html"> <img src="imgs/vild-mad-logo.png" alt="logo" /></a>
       <nav>
         <ul>
-          <li><a href="quiz2.html">Svampe Quizzen</a></li>
+          <button id="animated-button">Svampe Quizzen</button>
+          <!-- <li><a href="quiz2.html">Svampe Quizzen</a></li> -->
         </ul>
       </nav>
     </header>
 
     <main>
-    <!-- Filtrering  -->
-    <h1>Svampe Filter</h1>
-    <form id="filterForm">
-      <label for="mushroomType">Vælg Svampe Type:</label>
-      <select id="mushroomType" name="mushroomType">
-        <option value="all">Alle Svampe</option>
-        <option value="eatable">Spiselig</option>
-        <option value="noneatable">Ikke Spiselig</option>
-      </select>
-      <button type="submit">Filtrer</button>
-    </form>
-    <div id="filteredResults">
-      <!-- Filtered mushroom data will be displayed here -->
-    </div>
+      <!-- Filtrering  -->
+      <h1>Svampe Filter</h1>
+      <form id="filterForm">
+        <label for="mushroomType">Vælg Svampe Type:</label>
+        <select id="mushroomType" name="mushroomType">
+          <option value="all">Alle Svampe</option>
+          <option value="eatable">Spiselig</option>
+          <option value="noneatable">Ikke Spiselig</option>
+        </select>
+        <button type="submit">Filtrer</button>
+      </form>
+      <div id="filteredResults">
+        <!-- Filtered mushroom data will be displayed here -->
+      </div>
 
-    <!-- data herunder -->
-    <div class="grid"></div>
-    <template>
-      <article class="svamp">
-        
-        <h2 class="title_">Titel</h2>
-        <h2 class="kategori_">Titel</h2>
-        <!-- <h3 class="season_0">Season</h2> -->
-        <p class="description"></p>
-        <p class="opskrift"></p>
-        
-        <img
-          src="https://images.pexels.com/photos/6499009/pexels-photo-6499009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-        />
-        <p class="spiselig">Spiselig</p>
-        <button class="opskriftbtn">Se Opskrift</button>
-      </article>
-      
-    </template>
+      <!-- data herunder -->
+      <div class="grid"></div>
+      <template>
+        <article class="svamp">
+          <h2 class="title_">Titel</h2>
+          <h2 class="kategori_">Titel</h2>
+          <!-- <h3 class="season_0">Season</h2> -->
+          <p class="description"></p>
+          <p class="opskrift"></p>
 
-    <script src="js/main.js"></script>
-  </main>
-  <footer></footer>
+          <img
+            src="https://images.pexels.com/photos/6499009/pexels-photo-6499009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <p class="spiselig">Spiselig</p>
+          <button class="opskriftbtn">Se Opskrift</button>
+        </article>
+      </template>
+
+      <script src="js/main.js"></script>
+    </main>
+    <footer></footer>
   </body>
 </html>
