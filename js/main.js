@@ -14,8 +14,8 @@ filterForm.addEventListener("submit", function (e) {
 
 // Fetch and filter the mushrooms initially
 fetch(
-  "https://hgxphlvxhzinnokdclkh.supabase.co/rest/v1/Data?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhneHBobHZ4aHppbm5va2RjbGtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTAyMDcsImV4cCI6MjAwOTU2NjIwN30.rxRj6VAFxUXkCNfe8DMj0SidSXcKpBTLtSL9CAElxMU"
-)
+    "https://hgxphlvxhzinnokdclkh.supabase.co/rest/v1/Data?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhneHBobHZ4aHppbm5va2RjbGtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTAyMDcsImV4cCI6MjAwOTU2NjIwN30.rxRj6VAFxUXkCNfe8DMj0SidSXcKpBTLtSL9CAElxMU"
+  )
   .then((res) => res.json())
   .then((data) => {
     if (Array.isArray(data)) {
@@ -69,25 +69,23 @@ function showSvamp(svamp) {
 
   copy.querySelector("img").src = svamp.profile_image_src;
 
-  // Store the isEatable value as a data attribute for filtering
-  copy.querySelector(".svamp").dataset.isEatable = svamp.isEatable;
+  // Store the isEatable value and the link as data attributes for filtering and opening the link
+  copy.querySelector(".opskriftbtn").dataset.isEatable = svamp.isEatable;
+  copy.querySelector(".opskriftbtn").dataset.link = svamp.Opskrift;
 
   const parent = document.querySelector(".grid");
   parent.appendChild(copy);
 }
 
-// Function to handle clicking on a svamp element
+// Function to handle clicking on a svamp element and open the link
 function handleClick(event) {
-  const svamp = event.target.closest(".svamp");
+  const svamp = event.target.closest(".opskriftbtn");
   if (svamp) {
-    const title = svamp.querySelector(".title_").textContent;
-    const description = svamp.querySelector(".description").textContent;
-    const opskrift = svamp.querySelector(".opskrift").textContent;
-
-    // Display an alert with the mushroom's title and description
-    alert(
-      `Mushroom Title: ${title}\nDescription: ${description}\nOpskrift: ${opskrift}`
-    );
+    const link = svamp.dataset.link; // Get the link from the data attribute
+    if (link) {
+      // Open the link in a new tab/window
+      window.open(link, '_blank');
+    }
   }
 }
 
