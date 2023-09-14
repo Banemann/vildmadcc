@@ -13,9 +13,11 @@ filterForm.addEventListener("submit", function (e) {
 });
 
 // Fetch and filter the mushrooms initially
-fetch('https://hgxphlvxhzinnokdclkh.supabase.co/rest/v1/Data?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhneHBobHZ4aHppbm5va2RjbGtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTAyMDcsImV4cCI6MjAwOTU2NjIwN30.rxRj6VAFxUXkCNfe8DMj0SidSXcKpBTLtSL9CAElxMU')
-  .then(response => response.json())
-  .then(data => {
+fetch(
+  "https://hgxphlvxhzinnokdclkh.supabase.co/rest/v1/Data?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhneHBobHZ4aHppbm5va2RjbGtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTAyMDcsImV4cCI6MjAwOTU2NjIwN30.rxRj6VAFxUXkCNfe8DMj0SidSXcKpBTLtSL9CAElxMU"
+)
+  .then((response) => response.json())
+  .then((data) => {
     if (Array.isArray(data)) {
       showSvampe(data);
       filterSvampe();
@@ -25,6 +27,14 @@ fetch('https://hgxphlvxhzinnokdclkh.supabase.co/rest/v1/Data?apikey=eyJhbGciOiJI
   })
   .catch((error) => {
     console.error("Error fetching data:", error);
+  });
+
+// JavaScript to open a new page when the button is clicked
+document
+  .getElementById("animated-button")
+  .addEventListener("click", function () {
+    // Replace 'newpage.html' with the URL of the page you want to open
+    window.open("quiz2.html", "_blank");
   });
 
 // Function to filter and display mushrooms based on the selected filter
@@ -82,7 +92,7 @@ function handleClick(event) {
     const link = svamp.dataset.link; // Get the link from the data attribute
     if (link) {
       // Open the link in a new tab/window
-      window.open(link, '_blank');
+      window.open(link, "_blank");
     }
   }
 }
